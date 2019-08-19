@@ -1,0 +1,8 @@
+<ul *ngFor="let item of GetInstaMsgs()">
+    <li>{{item}}</li>
+</ul>
+<hr>
+<h3> Directly calling messenger service</h3>
+<ul *ngFor="let item of this.MsgSvc.GetInsta()">
+    <li>{{item}}</li>
+</ul>

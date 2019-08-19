@@ -1,0 +1,13 @@
+<div class = "btn">
+    <img src="/assets/santa.jpg" alt="Santa not loaded" width="400px" height="250px">
+<div>Username: <input type="text" [(ngModel)]="Username" placeholder="Enter Username" class = "fieldbox"/></div>
+<div>Password: <input type="password" [(ngModel)]="Password" value="" placeholder="Enter Password" class = "fieldbox"/></div>
+<button onclick="alert('Login in progress...')" (click)="Login(Username,Password)">Login</button>
+<h5>{{LoginStatus}}</h5>
+<button (click)="show = !show">{{show?'Hide santa':'show'}}</button>
+<br>
+<div *ngIf="LoginStatus; else elseTemplate">Text to show</div>
+<ng-template #elseTemplate>
+    <b>Else template executed</b>
+</ng-template>
+</div>

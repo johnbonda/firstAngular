@@ -1,0 +1,8 @@
+<h1>Data from component B</h1>
+Value of Property: {{valueForProp}}
+<br>
+Value after customEvent fired: {{resultOfEvent}}
+
+<br><b>---------------</b><br>
+<h1>Data from component A</h1>
+<app-a [propA]="valueForProp" (CustomEvent)="customEventHandler()"></app-a>
